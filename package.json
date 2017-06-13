@@ -4,7 +4,7 @@
   "description": "Gelf transformation for good logs.",
   "main": "src/index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
