@@ -1,3 +1,5 @@
+'use strict';
+
 const test = require('tape');
 const Streams = require('./fixture/streams');
 const GoodGelf = require('../lib');
