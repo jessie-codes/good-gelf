@@ -1,5 +1,7 @@
 # good-gelf
 
+[![Build Status](https://travis-ci.org/jessie-codes/good-gelf.svg?branch=master)](https://travis-ci.org/jessie-codes/good-gelf)
+
 Good Reporter for Graylog.
 
 This module is for transforming good logs into `gelf` format for Graylog. This module is intended to be used with other good modules, such as `good-file` for saving the output for scenarios in which UDP will not work.
