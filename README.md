@@ -21,7 +21,7 @@ const server = new Hapi.Server();
 server.connection();
 
 const options = {
-    reporters: [{
+    reporters: {
         gelf: [{
             module: 'good-squeeze',
             name: 'Squeeze',
@@ -32,13 +32,13 @@ const options = {
             module: 'good-file',
             args: ['./server.log']
         }]
-    }]
+    }
 };
 
 server.register({
     register: good,
     options
-} err => {
+}, err => {
     if (err) return console.error(err);
 
     server.start(() => {
