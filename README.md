@@ -8,6 +8,11 @@ This module is for transforming good logs into `gelf` format for Graylog. This m
 
 If you're looking for a UDP version, try [good-graylog2](https://www.npmjs.com/package/good-graylog2).
 
+## Options
+
++ **format** `String` : The format the timestamp should be saved with. If not passed, it will default to POSIX time.
++ **info** `Object` : An object containing parameters that should be added to each log entry.
+
 ## Usage
 
 ```javascript
@@ -27,7 +32,8 @@ const options = {
             name: 'Squeeze',
             args: [{ log: '*', response: '*' }]
         }, {
-            module: 'good-gelf'
+            module: 'good-gelf',
+						args: ['YYYY-MM-DD', {app: 'Dashboard'}]
         }, {
             module: 'good-file',
             args: ['./server.log']
