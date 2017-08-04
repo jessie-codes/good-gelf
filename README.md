@@ -1,6 +1,8 @@
 # good-gelf
 
 [![Build Status](https://travis-ci.org/jessie-codes/good-gelf.svg?branch=master)](https://travis-ci.org/jessie-codes/good-gelf)
+[![npm version](https://badge.fury.io/js/good-gelf.svg)](https://badge.fury.io/js/good-gelf)
+
 
 Good Reporter for Graylog.
 
