@@ -1,6 +1,6 @@
 {
   "name": "good-gelf",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Gelf transformation for good logs.",
   "main": "lib/index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "tape": "4.8.0"
   },
   "dependencies": {
-    "fast-safe-stringify": "1.2.0"
+    "fast-safe-stringify": "1.2.0",
+    "time-stamp": "^2.0.0"
   }
 }

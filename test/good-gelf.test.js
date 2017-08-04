@@ -163,3 +163,41 @@ test('returns a formatted string for other events', (t) => {
 		t.end();
 	});
 });
+
+test('should format the timestamp', (t) => {
+	const reporter = new GoodGelf('YYYY-MM-DD');
+	const out = new Streams.Writer();
+	const reader = new Streams.Reader();
+
+	reader.pipe(reporter).pipe(out);
+	reader.push(internals.default);
+	reader.push(null);
+
+	reader.once('end', () => {
+		t.equal(out.data.length, 1);
+
+		const index = out.data[0].indexOf(/timestamp:"[0-9]{4}-[0-9]{2}-[0-9]{2}"/);
+
+		t.ok(index);
+		t.end();
+	});
+});
+
+test('should add the info passed in', (t) => {
+	const reporter = new GoodGelf(null, {app: 'Dashboard'});
+	const out = new Streams.Writer();
+	const reader = new Streams.Reader();
+
+	reader.pipe(reporter).pipe(out);
+	reader.push(internals.default);
+	reader.push(null);
+
+	reader.once('end', () => {
+		t.equal(out.data.length, 1);
+
+		const index = out.data[0].indexOf('_app:Dashboard');
+
+		t.ok(index);
+		t.end();
+	});
+});
