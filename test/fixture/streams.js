@@ -3,12 +3,12 @@
 const Stream = require('stream');
 
 class Writer extends Stream.Writable {
-	constructor() {
+	constructor () {
 
 		super({ objectMode: true });
 		this.data = [];
 	}
-	_write(chunk, enc, callback) {
+	_write (chunk, enc, callback) {
 
 		this.data.push(chunk);
 		callback(null);
@@ -16,11 +16,16 @@ class Writer extends Stream.Writable {
 }
 
 class Reader extends Stream.Readable {
-	constructor() {
+	constructor () {
 
 		super({ objectMode: true });
 	}
-	_read() {}
+	_read () {
+		return true;
+	}
 }
 
-module.exports = { Writer, Reader };
+module.exports = {
+	Writer,
+	Reader
+};

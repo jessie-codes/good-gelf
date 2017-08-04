@@ -13,7 +13,10 @@ internals.ops = {
 	pid: 64291,
 	os: {
 		load: [1.650390625, 1.6162109375, 1.65234375],
-		mem: { total: 17179869184, free: 8190681088 },
+		mem: {
+			total: 17179869184,
+			free: 8190681088
+		},
 		uptime: 704891
 	},
 	proc: {
@@ -30,7 +33,10 @@ internals.ops = {
 		concurrents: {},
 		responseTimes: {},
 		listener: {},
-		sockets: { http: {}, https: {} }
+		sockets: {
+			http: {},
+			https: {}
+		}
 	}
 };
 
@@ -51,7 +57,7 @@ internals.response = {
 	httpVersion: '1.1',
 	source: {
 		remoteAddress: '127.0.0.1',
-		userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36',
+		userAgent: 'Mozilla/5.0 (Macintosh)',
 		referer: 'http://localhost:61253/'
 	}
 };
@@ -86,7 +92,7 @@ internals.default = {
 	pid: 64291
 };
 
-test('returns a formatted string for "ops" events', t => {
+test('returns a formatted string for "ops" events', (t) => {
 	const reporter = new GoodGelf();
 	const out = new Streams.Writer();
 	const reader = new Streams.Reader();
@@ -99,13 +105,13 @@ test('returns a formatted string for "ops" events', t => {
 		t.equal(out.data.length, 1);
 
 		const index = out.data[0].indexOf(`short_message:"Stats for ${internals.ops.timestamp}"`);
-		t.ok(index);
 
-		t.end()
+		t.ok(index);
+		t.end();
 	});
 });
 
-test('returns a formatted string for "response" events', t => {
+test('returns a formatted string for "response" events', (t) => {
 	const reporter = new GoodGelf();
 	const out = new Streams.Writer();
 	const reader = new Streams.Reader();
@@ -118,13 +124,13 @@ test('returns a formatted string for "response" events', t => {
 		t.equal(out.data.length, 1);
 
 		const index = out.data[0].indexOf(`short_message:"Response for ${internals.response.path}"`);
-		t.ok(index);
 
-		t.end()
+		t.ok(index);
+		t.end();
 	});
 });
 
-test('returns a formatted string for "error" events', t => {
+test('returns a formatted string for "error" events', (t) => {
 	const reporter = new GoodGelf();
 	const out = new Streams.Writer();
 	const reader = new Streams.Reader();
@@ -137,13 +143,13 @@ test('returns a formatted string for "error" events', t => {
 		t.equal(out.data.length, 1);
 
 		const index = out.data[0].indexOf(`short_message:"${internals.error.error.name}"`);
-		t.ok(index);
 
-		t.end()
+		t.ok(index);
+		t.end();
 	});
 });
 
-test('returns a formatted string for other events', t => {
+test('returns a formatted string for other events', (t) => {
 	const reporter = new GoodGelf();
 	const out = new Streams.Writer();
 	const reader = new Streams.Reader();
@@ -154,6 +160,6 @@ test('returns a formatted string for other events', t => {
 
 	reader.once('end', () => {
 		t.equal(out.data.length, 1);
-		t.end()
+		t.end();
 	});
 });
