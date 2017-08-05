@@ -35,7 +35,7 @@ const options = {
             args: [{ log: '*', response: '*' }]
         }, {
             module: 'good-gelf',
-						args: ['YYYY-MM-DD', {app: 'Dashboard'}]
+            args: ['YYYY-MM-DD', {app: 'Dashboard'}]
         }, {
             module: 'good-file',
             args: ['./server.log']

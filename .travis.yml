@@ -13,3 +13,9 @@ before_script: greenkeeper-lockfile-update
 script:
   - npm test
 after_script: greenkeeper-lockfile-upload
+deploy:
+  provider: npm
+  email: $EMAIL
+  api_key: $NPM_AUTH
+  on:
+    tags: true
