@@ -88,7 +88,7 @@ internals.default = {
 	event: 'request',
 	timestamp: 1458264810957,
 	tags: ['user', 'info'],
-	data: 'you made a default',
+	data: 'you made a default log',
 	pid: 64291
 };
 
@@ -165,7 +165,7 @@ test('returns a formatted string for other events', (t) => {
 });
 
 test('should format the timestamp', (t) => {
-	const reporter = new GoodGelf('YYYY-MM-DD');
+	const reporter = new GoodGelf('YYYY-MM-DD HH:mm:ss.ms');
 	const out = new Streams.Writer();
 	const reader = new Streams.Reader();
 
