@@ -35,7 +35,7 @@ const options = {
             args: [{ log: '*', response: '*' }]
         }, {
             module: 'good-gelf',
-            args: ['YYYY-MM-DD', {app: 'Dashboard'}]
+			args: ['YYYY-MM-DD', {app: 'Dashboard'}]
         }, {
             module: 'good-file',
             args: ['./server.log']
@@ -53,5 +53,13 @@ server.register({
         console.info(`Server started at ${ server.info.uri }`);
     });
 });
+
+```
+
+## Output
+
+```json
+
+{"_event":"request","timestamp":"2017-08-10 16:42:24.957","_tags_0":"user","_tags_1":"info","_data":"you made a default log","_pid":64291,"version":"1.1","host":"hostname","message":"Log event for tags: [\"user\",\"info\"]","short_message":"Log event for tags: [\"user\",\"info\"]"}
 
 ```
