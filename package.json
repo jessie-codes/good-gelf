@@ -1,6 +1,6 @@
 {
   "name": "good-gelf",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Gelf transformation for good logs.",
   "main": "lib/index.js",
   "scripts": {
