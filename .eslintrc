@@ -8,7 +8,6 @@
     /* Possible Errors */
     "getter-return": ["error"],
     "no-extra-parens": ["error"],
-    "no-prototype-builtins": ["error"],
     "no-template-curly-in-string": ["error"],
 
     /* Best Practices */
