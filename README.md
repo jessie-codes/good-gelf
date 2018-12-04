@@ -1,7 +1,9 @@
 # good-gelf
 
+[![NPM](https://nodei.co/npm/good-gelf.png?compact=true)](https://nodei.co/npm/good-gelf/)
+
 [![Build Status](https://travis-ci.org/jessie-codes/good-gelf.svg?branch=master)](https://travis-ci.org/jessie-codes/good-gelf)
-[![npm version](https://badge.fury.io/js/good-gelf.svg)](https://badge.fury.io/js/good-gelf)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/jessie-codes/good-gelf.svg)](https://greenkeeper.io/)
 
 Good Reporter for Graylog.
