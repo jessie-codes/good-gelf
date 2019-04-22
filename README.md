@@ -2,9 +2,10 @@
 
 [![NPM](https://nodei.co/npm/good-gelf.png?compact=true)](https://nodei.co/npm/good-gelf/)
 
-[![Build Status](https://travis-ci.org/jessie-codes/good-gelf.svg?branch=master)](https://travis-ci.org/jessie-codes/good-gelf)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/jessie-codes/good-gelf.svg)](https://greenkeeper.io/)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/jessie-codes/good-gelf.svg?branch=master)](https://travis-ci.org/jessie-codes/good-gelf)
+[![Coverage Status](https://coveralls.io/repos/github/jessie-codes/good-gelf/badge.svg?branch=master)](https://coveralls.io/github/jessie-codes/good-gelf?branch=master)
 
 Good Reporter for Graylog.
 

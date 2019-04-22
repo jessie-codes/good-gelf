@@ -1,11 +1,13 @@
 {
   "name": "good-gelf",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Gelf transformation for good logs.",
   "main": "lib/index.js",
   "scripts": {
+    "fix": "eslint lib test --fix",
     "pretest": "eslint lib test",
-    "test": "tape test/*.js"
+    "test": "nyc tape test/*.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -30,12 +32,14 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "nyc": "^14.0.0",
     "tape": "^4.9.1"
   },
   "dependencies": {
+    "coveralls": "^3.0.3",
     "fast-safe-stringify": "^2.0.6",
-    "flat": "^4.1.0",
     "lodash": "^4.17.11",
+    "safe-flat": "^1.0.0",
     "time-stamp": "^2.2.0"
   }
 }
