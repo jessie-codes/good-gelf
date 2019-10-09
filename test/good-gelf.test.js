@@ -4,7 +4,7 @@ const test = require('tape')
 const Streams = require('./fixture/streams')
 const GoodGelf = require('../lib')
 
-let internals = {}
+const internals = {}
 
 internals.ops = {
   event: 'ops',
